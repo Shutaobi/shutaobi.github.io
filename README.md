@@ -86,7 +86,7 @@ Create a `cv/` folder and save your PDF as `cv/Shutao_Bi_CV.pdf`. Replace the CV
 - Website address after deployment: <https://reveavecsolitude-lgtm.github.io/>
 - Publishing source: **Deploy from a branch**, **main**, **/ (root)**.
 
-The local repository is prepared on `main`, with `origin` pointing to `https://github.com/reveavecsolitude-lgtm/reveavecsolitude-lgtm.github.io.git`. Initial remote creation, upload, and publication await approval. This address will not serve this website until deployment completes.
+The repository uses `main`, with `origin` pointing to `https://github.com/reveavecsolitude-lgtm/reveavecsolitude-lgtm.github.io.git`. GitHub Pages serves the website at the address above after a successful deployment.
 
 For first publication, create the matching public repository without initializing it with a README, license, or `.gitignore`, then push the local `main` branch. In the repository's **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, and save. GitHub supplies the `github.io` address and HTTPS; no custom domain, DNS changes, or `CNAME` file is needed. `.nojekyll` lets GitHub serve the plain static files without a Jekyll build.
 
