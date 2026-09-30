@@ -1,0 +1,8 @@
+.DS_Store
+._*
+.AppleDouble/
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
