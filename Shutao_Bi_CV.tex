@@ -1,0 +1,133 @@
+% Shutao Bi -- Academic curriculum vitae
+% Standalone document: no external images, bibliography, or class files required.
+% Compile in the Codex LaTeX editor, or with pdfLaTeX locally.
+% This is a local draft. Publish only after the missing details are supplied.
+%
+% DETAILS TO ADD:
+% 1. University, department, degree designation, and attendance dates.
+% 2. Advisor and thesis title, if applicable.
+% 3. Previous degrees and institutions.
+% 4. Official manuscript title and any arXiv / DOI / journal information.
+% 5. Talks, teaching, awards, and other relevant academic experience.
+% Optional sections below are commented out so the PDF has no empty headings.
+
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=25mm]{geometry}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage[hidelinks]{hyperref}
+
+\hypersetup{
+  pdftitle={Shutao Bi -- Curriculum Vitae},
+  pdfauthor={Shutao Bi},
+  pdfsubject={Academic curriculum vitae}
+}
+\urlstyle{same}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4em}
+\setlength{\emergencystretch}{2em}
+\raggedbottom
+\pagestyle{plain}
+
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{1.4em}{0.65em}
+\setlist[itemize]{leftmargin=1.4em,itemsep=0.15em,topsep=0.2em}
+\setlist[enumerate]{leftmargin=1.5em,itemsep=0.5em,topsep=0.3em}
+
+% Reusable entry: \cventry{Dates}{Degree or position}{Institution and details}
+% Use short date ranges, e.g. 2024--2026, to keep the first line tidy.
+\newcommand{\cventry}[3]{%
+  \noindent\textbf{#2}\hfill #1\par
+  #3\par\smallskip
+}
+
+\begin{document}
+
+\begin{center}
+  {\LARGE\bfseries Shutao Bi}\par
+  \vspace{0.25em}
+  {\large Curriculum Vitae}\par
+  \vspace{0.35em}
+  My email:\href{mailto:shutaobi@mail.sdu.edu.cn}{shutaobi@mail.sdu.edu.cn}
+  \quad\textbar\quad
+ My personal Website: \href{https://shutaobi.github.io/}{shutaobi.github.io}
+  % Add department, institution, and postal address here when confirmed.
+\end{center}
+
+\section*{Education}
+
+Shandong University, 2020.9-2024.7, Undergraduate, GPA: About 82/100
+
+Shandong University, 2024.9-2027.7, To Graduate, GPA: About 87/100
+
+\section*{Research Interests}
+
+Algebraic Geometry; Noncommutative Algebraic Geometry; Threefold Flops;
+Contraction Algebras.
+
+\section*{Preprints and Manuscripts}
+
+\begin{enumerate}
+  \item Shutao Bi.
+    % The filename is retained because the official paper title is not yet
+    % confirmed. Replace only the link's display text with that title later.
+    \href{https://shutaobi.github.io/thesis/Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf}{%
+      \nolinkurl{Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf}}.
+    Preliminary version, September 2026.
+    % Add verified bibliographic information here when available:
+    % arXiv: \href{https://arxiv.org/abs/IDENTIFIER}{IDENTIFIER}.
+    % DOI: \href{https://doi.org/IDENTIFIER}{IDENTIFIER}.
+    % Journal: Journal name, volume (year), pages.
+    % Repository: \url{https://github.com/OWNER/REPOSITORY}.
+\end{enumerate}
+
+% Uncomment only the sections that apply, and replace all example fields.
+%
+% \section*{Research Experience}
+% \cventry{Dates}{Position or project}{%
+%   Institution. Supervisor: Name.\\
+%   Brief description of your contribution.}
+%
+% \section*{Talks}
+% \begin{itemize}
+%   \item \emph{Talk title}, seminar or conference, institution, month year.
+% \end{itemize}
+%
+% \section*{Teaching Experience}
+% \cventry{Term, year}{Teaching role -- Course title}{%
+%   Institution. Brief description of responsibilities.}
+%
+% \section*{Honors and Awards}
+% \begin{itemize}
+%   \item Award name, awarding institution, year.
+% \end{itemize}
+%
+% \section*{Conferences and Schools Attended}
+% \begin{itemize}
+%   \item Event name, institution or location, dates.
+% \end{itemize}
+%
+% \section*{Academic Service}
+% \begin{itemize}
+%   \item Role, organization or event, dates.
+% \end{itemize}
+%
+% \section*{Skills and Languages}
+% Languages: Language and proficiency.\\
+% Computing: Relevant mathematical software and programming languages.
+%
+% \section*{References}
+% Include referees and their contact details only with their permission.
+
+\section*{About me}
+I am a Master Student learning algebraic geometry, especailly 3fold flops and contraction algebras. I am interested in pursuing doctoral research in these areas.
+
+I have a 6.5 Level certificate on IELTS and A2 Level DELF certificate on French. My mother tongue is Mandarin.
+
+
+\end{document}

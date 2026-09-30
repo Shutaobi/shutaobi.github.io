@@ -1,6 +1,6 @@
 # Shutao Bi — Academic homepage
 
-A small, responsive academic website built with plain HTML and CSS. No JavaScript, package manager, external fonts, framework, or build step is required. The site works on GitHub Pages, including under a repository subpath.
+A small, responsive academic website built with plain HTML and CSS. No JavaScript, package manager, external fonts, or framework is required. GitHub Actions compiles the CV from LaTeX and deploys the static files; the HTML and CSS themselves need no build step.
 
 ## Files
 
@@ -8,12 +8,14 @@ A small, responsive academic website built with plain HTML and CSS. No JavaScrip
 index.html       All content and navigation
 styles.css       Typography, layout, mobile, and print styles
 thesis/          Locally hosted paper PDFs
+Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
+.github/workflows/deploy.yml  CV compilation and Pages deployment
 .nojekyll        Tells GitHub Pages to serve the static files directly
 .gitignore       Keeps local system files and environment secrets out of Git
 README.md        Editing and local preview instructions
 ```
 
-The navigation links to sections within `index.html`: Home, Research, Papers / Preprints, Talks / Notes, CV, and Contact. Research interests appear on the homepage; the fuller Research overview and CV await your text/files. Talks / Notes and Contact are intentionally blank. The email link is in the homepage introduction.
+The navigation links to sections within `index.html`: Home, Research, Papers / Preprints, Talks / Notes, CV, and Contact. Research interests appear on the homepage; the fuller Research overview awaits your text. Talks / Notes and Contact are intentionally blank. The email link is in the homepage introduction, and the CV section links to the automatically generated PDF.
 
 ## Preview locally
 
@@ -23,7 +25,7 @@ In this folder, run:
 python3 -m http.server 8000 --bind 127.0.0.1
 ```
 
-Open <http://127.0.0.1:8000/>. Stop the server with `Ctrl+C`. You can also open `index.html` directly in a browser. Edits appear after refreshing; nothing needs to be compiled.
+Open <http://127.0.0.1:8000/>. Stop the server with `Ctrl+C`. You can also open `index.html` directly in a browser. HTML/CSS edits appear after refreshing. For a working local CV link, put a compiled copy of the CV at `cv/Shutao_Bi_CV.pdf`; see below. GitHub creates this file automatically when publishing.
 
 ## Edit the homepage
 
@@ -63,13 +65,27 @@ For a metadata link, replace its `<dd>To be added</dd>` with `<dd><a href="YOUR_
 
 The first paper is a copy of the original thesis PDF. Its public link is `thesis/Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf`. A path on your Mac would not work for website visitors. If you revise the original PDF, copy the updated file into this site's `thesis/` folder again; the files are not automatically synchronized.
 
-## Add your CV
+## Update your CV
 
-Create a `cv/` folder and save your PDF as `cv/Shutao_Bi_CV.pdf`. Replace the CV placeholder paragraph with:
+Edit `Shutao_Bi_CV.tex`, either locally in the LaTeX editor or directly in GitHub's file editor. Commit and push to `main`. The **Build CV and deploy website** workflow automatically:
 
-```html
-<p><a href="cv/Shutao_Bi_CV.pdf">Download CV (PDF)</a></p>
+1. Compiles the source with pdfLaTeX using TeX Live 2025.
+2. Places the generated PDF at `cv/Shutao_Bi_CV.pdf` in the deployment artifact.
+3. Checks the homepage's local links and publishes the static website.
+
+The permanent CV URL is <https://shutaobi.github.io/cv/Shutao_Bi_CV.pdf>. The generated PDF is deployed directly, not committed back to the source branch. Only the `.tex` source needs to be maintained. A failed compilation stops deployment and leaves the previous published website intact.
+
+For a CV-only update:
+
+```sh
+git add Shutao_Bi_CV.tex
+git commit -m "Update CV"
+git push origin main
 ```
+
+Saving a local file alone does not upload it; a commit and push are required. Editing and committing the file on GitHub also triggers the workflow. You can retry a build in the repository's **Actions** tab, or use **Run workflow** to publish manually.
+
+For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `.nojekyll`, all PDFs under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
 
 ## Check after editing
 
@@ -84,20 +100,20 @@ Create a `cv/` folder and save your PDF as `cv/Shutao_Bi_CV.pdf`. Replace the CV
 - GitHub account: `Shutaobi`
 - Repository: `Shutaobi/shutaobi.github.io`
 - Website address: <https://shutaobi.github.io/>
-- Publishing source: **Deploy from a branch**, **main**, **/ (root)**.
+- Publishing source: **GitHub Actions**, triggered by pushes to **main**.
 
 The repository uses `main`, with `origin` pointing to `https://github.com/Shutaobi/shutaobi.github.io.git`. GitHub Pages serves the website at the address above after a successful deployment.
 
-The public repository is configured in **Settings → Pages** to **Deploy from a branch**, using **main** and **/ (root)**. GitHub supplies the `github.io` address and HTTPS; no custom domain, DNS changes, or `CNAME` file is needed. `.nojekyll` lets GitHub serve the plain static files without a Jekyll build.
+The public repository is configured in **Settings → Pages** to use **GitHub Actions**. The workflow is `.github/workflows/deploy.yml`. GitHub supplies the `github.io` address and HTTPS; no custom domain, DNS changes, or `CNAME` file is needed. The website remains plain static HTML/CSS with no Jekyll or npm build. Actions versions are pinned to commits, and the build does not require a personal access token.
 
 After the first deployment, future updates can be published from this folder with:
 
 ```sh
-git add index.html styles.css README.md thesis/
+git add index.html styles.css README.md thesis/ Shutao_Bi_CV.tex
 git commit -m "Update academic homepage"
 git push origin main
 ```
 
-Add any newly created folders, such as `cv/`, explicitly to `git add`. Check `git diff --cached` before committing. GitHub Pages will publish changes pushed to `main` once the publishing source is enabled.
+Add any newly created source files explicitly to `git add`; do not add generated CV PDFs. Check `git diff --cached` before committing. The workflow publishes changes pushed to `main` after CV compilation succeeds.
 
 Official setup reference: <https://docs.github.com/en/pages/quickstart>.
