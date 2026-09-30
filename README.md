@@ -81,14 +81,14 @@ Create a `cv/` folder and save your PDF as `cv/Shutao_Bi_CV.pdf`. Replace the CV
 
 ## GitHub Pages
 
-- GitHub account: `reveavecsolitude-lgtm`
-- Repository: `reveavecsolitude-lgtm/reveavecsolitude-lgtm.github.io`
-- Website address after deployment: <https://reveavecsolitude-lgtm.github.io/>
+- GitHub account: `Shutaobi`
+- Repository: `Shutaobi/shutaobi.github.io`
+- Website address: <https://shutaobi.github.io/>
 - Publishing source: **Deploy from a branch**, **main**, **/ (root)**.
 
-The repository uses `main`, with `origin` pointing to `https://github.com/reveavecsolitude-lgtm/reveavecsolitude-lgtm.github.io.git`. GitHub Pages serves the website at the address above after a successful deployment.
+The repository uses `main`, with `origin` pointing to `https://github.com/Shutaobi/shutaobi.github.io.git`. GitHub Pages serves the website at the address above after a successful deployment.
 
-For first publication, create the matching public repository without initializing it with a README, license, or `.gitignore`, then push the local `main` branch. In the repository's **Settings → Pages**, select **Deploy from a branch**, choose **main** and **/ (root)**, and save. GitHub supplies the `github.io` address and HTTPS; no custom domain, DNS changes, or `CNAME` file is needed. `.nojekyll` lets GitHub serve the plain static files without a Jekyll build.
+The public repository is configured in **Settings → Pages** to **Deploy from a branch**, using **main** and **/ (root)**. GitHub supplies the `github.io` address and HTTPS; no custom domain, DNS changes, or `CNAME` file is needed. `.nojekyll` lets GitHub serve the plain static files without a Jekyll build.
 
 After the first deployment, future updates can be published from this folder with:
 
