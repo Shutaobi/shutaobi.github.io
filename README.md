@@ -15,7 +15,7 @@ Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
 README.md        Editing and local preview instructions
 ```
 
-The navigation links to sections within `index.html`: Home, Research, Papers / Preprints, Talks / Notes, CV, and Contact. Research interests appear on the homepage; the fuller Research overview awaits your text. Talks / Notes and Contact are intentionally blank. The email link is in the homepage introduction, and the CV section links to the automatically generated PDF.
+The navigation links to sections within `index.html`: Home, Research, Papers / Preprints, Talks / Notes, CV, and Contact. Research interests appear on the homepage; the fuller Research overview awaits your text. Talks / Notes is intentionally blank. The email link appears in both the homepage introduction and Contact section, and the CV section links to the automatically generated PDF.
 
 ## Preview locally
 
