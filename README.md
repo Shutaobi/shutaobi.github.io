@@ -7,7 +7,7 @@ A small, responsive academic website built with plain HTML and CSS. No JavaScrip
 ```text
 index.html       All content and navigation
 styles.css       Typography, layout, mobile, and print styles
-thesis/          Locally hosted paper PDFs
+thesis/          Locally hosted paper PDFs and computational code ZIP archives
 Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
 .github/workflows/deploy.yml  CV compilation and Pages deployment
 .nojekyll        Tells GitHub Pages to serve the static files directly
@@ -65,6 +65,8 @@ For a metadata link, replace its `<dd>To be added</dd>` with `<dd><a href="YOUR_
 
 The first paper is a copy of the original thesis PDF. Its public link is `thesis/Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf`. A path on your Mac would not work for website visitors. If you revise the original PDF, copy the updated file into this site's `thesis/` folder again; the files are not automatically synchronized.
 
+Computational code is available from `thesis/thesis_external_files_2026-10-13.zip`, linked as **Computational code** below the paper. To add or update supporting code, copy its ZIP archive into `thesis/` and update the paper's download link in `index.html`. The publishing workflow includes both PDF and ZIP files from this folder.
+
 ## Update your CV
 
 Edit `Shutao_Bi_CV.tex`, either locally in the LaTeX editor or directly in GitHub's file editor. Commit and push to `main`. The **Build CV and deploy website** workflow automatically:
@@ -85,7 +87,7 @@ git push origin main
 
 Saving a local file alone does not upload it; a commit and push are required. Editing and committing the file on GitHub also triggers the workflow. You can retry a build in the repository's **Actions** tab, or use **Run workflow** to publish manually.
 
-For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `.nojekyll`, all PDFs under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
+For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `.nojekyll`, all PDFs and ZIP archives under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
 
 ## Check after editing
 

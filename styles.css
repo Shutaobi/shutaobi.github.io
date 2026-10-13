@@ -62,7 +62,7 @@ h1 { margin-bottom: .6rem; font: 3.7rem/1.12 var(--serif); letter-spacing: -.035
 .paper h3 a { text-decoration: none; }
 .paper h3 a:hover, .paper h3 a:focus-visible { text-decoration: underline; }
 .paper-authors { font-size: .9375rem; margin-bottom: 1rem; }
-.paper-resources { margin-bottom: 1.5rem; }
+.paper-resources { display: flex; flex-wrap: wrap; gap: .5rem 1.5rem; margin-bottom: 1.5rem; }
 .pdf-link { display: inline-flex; align-items: center; gap: .8rem; padding: .3rem 0; font-size: .9375rem; }
 .file-type { color: var(--accent); border: 1px solid #c6d1d8; border-radius: 2px; padding: .05rem .35rem; font-size: .6875rem; letter-spacing: .04em; line-height: 1.4; }
 .paper-metadata { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem 1.5rem; padding: 1rem 0 0; border-top: 1px solid var(--rule); margin: 0; font-size: .875rem; }
