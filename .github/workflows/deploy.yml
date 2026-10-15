@@ -39,8 +39,14 @@ jobs:
 
           site = Path('_site')
           site.mkdir()
-          for name in ('index.html', 'styles.css', '.nojekyll'):
+          for name in ('index.html', 'styles.css', 'script.js', '.nojekyll'):
               copy2(name, site / name)
+          for source in Path('assets').rglob('*'):
+              if not source.is_file() or source.suffix.lower() not in ('.svg', '.mp3'):
+                  continue
+              destination = site / source
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              copy2(source, destination)
           for source in Path('thesis').rglob('*'):
               if not source.is_file() or source.suffix.lower() not in ('.pdf', '.zip'):
                   continue

@@ -6,7 +6,8 @@
   <meta name="description" content="Shutao Bi, mathematics master's student. Research interests in algebraic geometry, noncommutative algebraic geometry, threefold flops, and contraction algebras.">
   <meta name="color-scheme" content="light">
   <title>Shutao Bi | Mathematics</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=winter-20261016">
+  <script src="script.js?v=winter-20261016" defer></script>
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%232b485f'/%3E%3Ctext x='32' y='44' text-anchor='middle' font-family='Georgia,serif' font-size='38' fill='white'%3EB%3C/text%3E%3C/svg%3E">
 </head>
 <body>
@@ -22,11 +23,35 @@
         <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
       </nav>
+      <aside class="music-player" aria-labelledby="music-title">
+        <p class="music-caption"><span aria-hidden="true">❄</span> Winter soundtrack</p>
+        <h2 id="music-title" lang="ja">恋色空</h2>
+        <p class="music-version">Off Vocal Version</p>
+        <audio id="winter-audio" controls autoplay loop preload="metadata" aria-label="恋色空 — Off Vocal Version">
+          <source src="assets/audio/koiiro-sora-off-vocal.mp3" type="audio/mpeg">
+          <a href="assets/audio/koiiro-sora-off-vocal.mp3">Listen to 恋色空 (MP3)</a>
+        </audio>
+        <div id="music-controls" hidden>
+          <div class="music-buttons">
+            <button id="music-toggle" type="button" aria-label="Play music">
+              <svg class="play-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M9 5v14l11-7Z"/></svg>
+              <svg class="pause-icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M7 5h4v14H7zm6 0h4v14h-4z"/></svg>
+            </button>
+            <span id="music-state" role="status">Press play to listen</span>
+            <button id="music-mute" type="button" aria-label="Mute music" aria-pressed="false">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m11 5-5 4H3v6h3l5 4Z"/><path class="sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="mute-cross" d="m15 9 6 6m0-6-6 6"/></svg>
+            </button>
+          </div>
+          <input id="music-progress" type="range" min="0" max="100" value="0" step="0.1" aria-label="Playback position" disabled>
+          <div class="music-times"><span id="music-elapsed">0:00</span><span id="music-duration">—:—</span></div>
+          <label class="music-volume" for="music-volume">Volume <input id="music-volume" type="range" min="0" max="1" value="0.25" step="0.05"></label>
+        </div>
+      </aside>
     </header>
 
     <main id="main">
       <section class="introduction" id="home" aria-labelledby="home-heading">
-        <p class="eyebrow">Academic homepage</p>
+        <p class="eyebrow">Academic homepage <span class="winter-mark" aria-hidden="true">❄</span></p>
         <h1 id="home-heading">Shutao Bi</h1>
         <p class="role">Mathematics master's student</p>
         <p class="intro-email"><a href="mailto:shutaobi@mail.sdu.edu.cn">shutaobi@mail.sdu.edu.cn</a></p>

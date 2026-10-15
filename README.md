@@ -1,12 +1,14 @@
 # Shutao Bi — Academic homepage
 
-A small, responsive academic website built with plain HTML and CSS. No JavaScript, package manager, external fonts, or framework is required. GitHub Actions compiles the CV from LaTeX and deploys the static files; the HTML and CSS themselves need no build step.
+A small, responsive academic website built with plain HTML, CSS, and a small JavaScript audio player. No package manager, external fonts, or framework is required. GitHub Actions compiles the CV from LaTeX and deploys the static files; the website itself needs no build step.
 
 ## Files
 
 ```text
 index.html       All content and navigation
 styles.css       Typography, layout, mobile, and print styles
+script.js        Music controls and graceful autoplay handling
+assets/          Decorative snowflake SVG and web-compatible MP3 audio
 thesis/          Locally hosted paper PDFs and computational code ZIP archives
 Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
 .github/workflows/deploy.yml  CV compilation and Pages deployment
@@ -32,6 +34,16 @@ Open <http://127.0.0.1:8000/>. Stop the server with `Ctrl+C`. You can also open 
 Open `index.html` in any text editor. The section IDs match the navigation links. Edit the name, role, email, and research interests in the `home` section. Replace the placeholder paragraph in `research` with your overview. Add content below the headings in `talks` and `contact` when ready. Keep each section ID unchanged unless you also update its navigation link.
 
 The color and font settings are at the top of `styles.css`. The two screen-width media queries adapt the layout to tablets and phones. The footer's update date is manual: update it when you change the content.
+
+## Winter theme and music
+
+The winter design uses a cool light gradient, stationary snowflakes, and a small music player. The snowflake drawing is `assets/snowflake.svg`; its size and opacity are controlled in `styles.css`. Decorations are ignored by assistive technology and omitted when printing. No motion or animation is used.
+
+The track is **恋色空 — Off Vocal Version**, converted from the supplied Apple Lossless M4A to a 192 kbps MP3 at `assets/audio/koiiro-sora-off-vocal.mp3` (about 9.1 MiB). The original audio file is unchanged. No cover art or embedded source metadata is included in the web copy.
+
+The player attempts autoplay at 25% volume and loops the track. Browsers may block audible autoplay until the visitor presses Play; this is expected. The player provides play/pause, mute, seeking, and desktop volume controls. Mobile visitors can also use their device's volume controls. There are no global click handlers that unexpectedly restart paused music. Native audio controls remain available when JavaScript is disabled. See [MDN's autoplay guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay).
+
+To change the track, replace the MP3 and update its source and display title in `index.html`. To remove the theme, remove the music player markup and script reference, then adjust the winter background and decoration rules in `styles.css`. Changes to CSS or JavaScript should also update the version query in the corresponding HTML reference to refresh browser caches.
 
 ## Add a paper
 
@@ -87,7 +99,7 @@ git push origin main
 
 Saving a local file alone does not upload it; a commit and push are required. Editing and committing the file on GitHub also triggers the workflow. You can retry a build in the repository's **Actions** tab, or use **Run workflow** to publish manually.
 
-For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `.nojekyll`, all PDFs and ZIP archives under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
+For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `script.js`, `.nojekyll`, SVG and MP3 files under `assets/`, all PDFs and ZIP archives under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
 
 ## Check after editing
 
@@ -111,7 +123,7 @@ The public repository is configured in **Settings → Pages** to use **GitHub Ac
 After the first deployment, future updates can be published from this folder with:
 
 ```sh
-git add index.html styles.css README.md thesis/ Shutao_Bi_CV.tex
+git add index.html styles.css script.js assets/ README.md thesis/ Shutao_Bi_CV.tex
 git commit -m "Update academic homepage"
 git push origin main
 ```
