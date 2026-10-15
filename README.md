@@ -8,7 +8,7 @@ A small, responsive academic website built with plain HTML, CSS, and a small Jav
 index.html       All content and navigation
 styles.css       Typography, layout, mobile, and print styles
 script.js        Music controls and graceful autoplay handling
-assets/          Decorative snowflake SVG and web-compatible MP3 audio
+assets/          Snowfield background, decorative snowflake SVG, and MP3 audio
 thesis/          Locally hosted paper PDFs and computational code ZIP archives
 Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
 .github/workflows/deploy.yml  CV compilation and Pages deployment
@@ -37,7 +37,7 @@ The color and font settings are at the top of `styles.css`. The two screen-width
 
 ## Winter theme and music
 
-The winter design uses a cool light gradient, stationary snowflakes, and a small music player. The snowflake drawing is `assets/snowflake.svg`; its size and opacity are controlled in `styles.css`. Decorations are ignored by assistive technology and omitted when printing. No motion or animation is used.
+The winter design uses a cleaned snowfield illustration as a full-screen background, translucent light reading surfaces, and a small music player. The supplied screenshot was edited with the built-in imagegen tool to remove the dialogue panel, all controls, video watermark and pet notification, reconstruct snow and footprints, and enhance detail. The final image is 1672 × 941 pixels (the image tool did not return the requested 4K dimensions). `assets/images/winter-snowfield.png` preserves the full output; the website uses the lighter JPEG copy. The background uses `cover`, so cropping changes with screen shape. The small snowflake drawing is `assets/snowflake.svg`. Decorations are ignored by assistive technology and omitted when printing. No motion or animation is used.
 
 The track is **恋色空 — Off Vocal Version**, converted from the supplied Apple Lossless M4A to a 192 kbps MP3 at `assets/audio/koiiro-sora-off-vocal.mp3` (about 9.1 MiB). The original audio file is unchanged. No cover art or embedded source metadata is included in the web copy.
 
@@ -99,7 +99,7 @@ git push origin main
 
 Saving a local file alone does not upload it; a commit and push are required. Editing and committing the file on GitHub also triggers the workflow. You can retry a build in the repository's **Actions** tab, or use **Run workflow** to publish manually.
 
-For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `script.js`, `.nojekyll`, SVG and MP3 files under `assets/`, all PDFs and ZIP archives under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
+For local preview, export the PDF from the LaTeX editor, or use your existing local TeX installation to compile it, then copy it to `cv/Shutao_Bi_CV.pdf`. Local CV PDFs, LaTeX auxiliary files, and `_site/` are ignored by Git. The workflow publishes `index.html`, `styles.css`, `script.js`, `.nojekyll`, SVG, MP3, JPEG and PNG files under `assets/`, all PDFs and ZIP archives under `thesis/`, and the generated CV. If adding other website assets, include them in the workflow's staging step.
 
 ## Check after editing
 
