@@ -7,7 +7,7 @@ A small, responsive academic website built with plain HTML, CSS, and a small Jav
 ```text
 index.html       All content and navigation
 styles.css       Typography, layout, mobile, and print styles
-script.js        Music controls and graceful autoplay handling
+script.js        Music controls (playback starts only with the Play button)
 assets/          Snowfield background, decorative snowflake SVG, and MP3 audio
 thesis/          Locally hosted paper PDFs and computational code ZIP archives
 Shutao_Bi_CV.tex  Editable CV source (automatically compiled on GitHub)
@@ -37,11 +37,11 @@ The color and font settings are at the top of `styles.css`. The two screen-width
 
 ## Winter theme and music
 
-The winter design uses a cleaned snowfield illustration as a full-screen background, translucent light reading surfaces, and a small music player. The supplied screenshot was edited with the built-in imagegen tool to remove the dialogue panel, all controls, video watermark and pet notification, reconstruct snow and footprints, and enhance detail. The final image is 1672 × 941 pixels (the image tool did not return the requested 4K dimensions). `assets/images/winter-snowfield.png` preserves the full output; the website uses the lighter JPEG copy. The background uses `cover`, so cropping changes with screen shape. The small snowflake drawing is `assets/snowflake.svg`. Decorations are ignored by assistive technology and omitted when printing. No motion or animation is used.
+The winter design uses an empty snowfield illustration as a full-screen background, translucent light reading surfaces, and a small music player. The supplied screenshot was edited with the built-in imagegen tool to remove the dialogue panel, all controls, video watermark and pet notification, reconstruct snow and footprints, and enhance detail. A further imagegen edit removes the central character, leaving the trees, distant mountains and footprints. `assets/images/winter-snowfield-empty.png` preserves the full edited output; the website uses its lighter JPEG copy. The previous illustration is retained in the repository. The image is 1672 × 941 pixels. The background uses `cover`, so cropping changes with screen shape. The small snowflake drawing is `assets/snowflake.svg`. Decorations are ignored by assistive technology and omitted when printing. No motion or animation is used.
 
-The track is **恋色空 — Off Vocal Version**, converted from the supplied Apple Lossless M4A to a 192 kbps MP3 at `assets/audio/koiiro-sora-off-vocal.mp3` (about 9.1 MiB). The original audio file is unchanged. No cover art or embedded source metadata is included in the web copy.
+The track is **恋色空 (Koiiro Sora) — Off Vocal Version**, converted from the supplied Apple Lossless M4A to a 192 kbps MP3 at `assets/audio/koiiro-sora-off-vocal.mp3` (about 9.1 MiB). The original audio file is unchanged. No cover art or embedded source metadata is included in the web copy.
 
-The player attempts autoplay at 25% volume and loops the track. Browsers may block audible autoplay until the visitor presses Play; this is expected. The player provides play/pause, mute, seeking, and desktop volume controls. Mobile visitors can also use their device's volume controls. There are no global click handlers that unexpectedly restart paused music. Native audio controls remain available when JavaScript is disabled. See [MDN's autoplay guide](https://developer.mozilla.org/en-US/docs/Web/Media/Guides/Autoplay).
+The player is stopped by default and starts only when the visitor presses Play. There is no HTML autoplay attribute or JavaScript startup play call. Volume starts at 25%; the track loops after being started. The player provides play/pause, mute, seeking, and desktop volume controls. Mobile visitors can also use their device's volume controls. There are no global click handlers that unexpectedly restart paused music. Native audio controls remain available when JavaScript is disabled.
 
 To change the track, replace the MP3 and update its source and display title in `index.html`. To remove the theme, remove the music player markup and script reference, then adjust the winter background and decoration rules in `styles.css`. Changes to CSS or JavaScript should also update the version query in the corresponding HTML reference to refresh browser caches.
 

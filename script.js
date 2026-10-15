@@ -85,5 +85,5 @@
   updateTime();
   updateVolume();
   if (audio.error) reportError();
-  else play(); // A blocked autoplay attempt leaves the explicit Play button available.
+  // Music starts only from the explicit Play button; never on load or navigation.
 })();

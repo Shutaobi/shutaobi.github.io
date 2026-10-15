@@ -1,0 +1,6 @@
+{
+  "tool": "Built-in imagegen image editing",
+  "source": "winter-snowfield.png",
+  "output": "winter-snowfield-empty.png",
+  "prompt": "Use case: precise-object-edit. Edit target: the supplied cleaned anime winter landscape. Remove ONLY the single woman standing at the center (Touma Kazusa), including her hair, face, coat, legs, shoes and her small contact shadow. Reconstruct that exact region seamlessly as uninterrupted snow with soft blue shading matching the adjacent snowfield. Preserve all other elements and their positions: the snowy trees on the left, mountain shapes, blue sky and clouds, distant forest, existing footprints in the foreground, horizon, framing, luminous blue-white palette and original 2D anime painting style. Keep the trail of footprints as a subtle trace in the empty landscape. No people, silhouettes, human figures, new objects, text, logos, UI, watermarks or borders. Do not redesign or recompose the scene. Landscape wallpaper, retain the input aspect ratio and detail."
+}
