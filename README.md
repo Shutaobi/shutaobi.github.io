@@ -79,6 +79,8 @@ The first paper is a copy of the original thesis PDF. Its public link is `thesis
 
 Computational code is available from `thesis/thesis_external_files_2026-10-13.zip`, linked as **Computational code** below the paper. To add or update supporting code, copy its ZIP archive into `thesis/` and update the paper's download link in `index.html`. The publishing workflow includes both PDF and ZIP files from this folder.
 
+**Geometric Realization**, by Shutao Bi (October 2026), is a separate manuscript linked from Papers / Preprints. Its PDF is `thesis/Geometric_Realization.pdf`, copied from the main `geometric_realization/` folder of the original research project. When revising it, replace this site's PDF copy and refresh the `v=` version marker in both of that paper's links in `index.html`.
+
 ## Update your CV
 
 Edit `Shutao_Bi_CV.tex`, either locally in the LaTeX editor or directly in GitHub's file editor. Commit and push to `main`. The **Build CV and deploy website** workflow automatically:
