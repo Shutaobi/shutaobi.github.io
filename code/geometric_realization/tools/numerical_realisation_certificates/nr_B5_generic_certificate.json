@@ -1,0 +1,291 @@
+{
+  "homogeneous_groebner_basis": [
+    {
+      "xxxx": "1"
+    },
+    {
+      "yy": "1",
+      "yxx": "1",
+      "xxy": "1",
+      "xyx": "1"
+    },
+    {
+      "xxxyx": "1",
+      "xyxy": "-1",
+      "xyxxx": "-1",
+      "yxyx": "1"
+    },
+    {
+      "xyxxyxx": "1",
+      "yxxyxy": "1",
+      "yxxyxxx": "1"
+    },
+    {
+      "yxxyxxyx": "1",
+      "xyxxyxxy": "-1"
+    },
+    {
+      "xyxxxyxy": "1",
+      "xxyxxyxxx": "1",
+      "xyxxxyxxx": "1"
+    },
+    {
+      "yxxxyxxyxx": "1",
+      "xyxxyxxxyx": "-1"
+    },
+    {
+      "yxxxyxy": "1",
+      "yxxxyxxx": "1",
+      "xyxxyxxx": "1"
+    },
+    {
+      "xyxxxyxxyx": "1",
+      "xxyxxyxxxy": "-1"
+    },
+    {
+      "xyxxyxxxyxxx": "1"
+    },
+    {
+      "yxxxyxxyx": "1",
+      "xyxxyxxxy": "-1"
+    }
+  ],
+  "ordinary_S_equal_1_groebner_basis": [
+    {
+      "xxxx": "1"
+    },
+    {
+      "yy": "1",
+      "yxx": "1",
+      "xxy": "1",
+      "xyx": "1"
+    },
+    {
+      "yxy": "1",
+      "xxyx": "-1",
+      "xyxx": "-1",
+      "": "-1"
+    },
+    {
+      "xxyxxx": "1",
+      "xx": "2",
+      "yxxxy": "1",
+      "yxxyx": "1",
+      "xxxyxx": "1",
+      "xyxxy": "1",
+      "y": "1"
+    },
+    {
+      "yxxxyxxx": "1",
+      "xyxxxyxx": "-1",
+      "xxyxxxyx": "1",
+      "xxxyxxxy": "-1",
+      "xxxy": "-1",
+      "xxyx": "1",
+      "xyxx": "-1",
+      "yxxx": "1"
+    },
+    {
+      "xxxyxxxy": "3",
+      "xxxy": "3",
+      "xxyxxxyx": "-2",
+      "xxyx": "-2",
+      "xyxxxyxx": "1",
+      "xyxx": "1"
+    },
+    {
+      "xxxyxxx": "4",
+      "xxx": "5",
+      "xyxxxy": "1",
+      "xxyxxy": "1",
+      "xy": "1"
+    },
+    {
+      "xyxxx": "1",
+      "xxxyx": "1",
+      "xxyxx": "1",
+      "x": "1"
+    }
+  ],
+  "ordinary_S_equal_1_basis_words": [
+    "",
+    "x",
+    "xx",
+    "y",
+    "xxx",
+    "xy",
+    "yx",
+    "xxy",
+    "xyx",
+    "yxx",
+    "xxxy",
+    "xxyx",
+    "xyxx",
+    "yxxx",
+    "xxxyx",
+    "xxyxx",
+    "yxxy",
+    "xxxyxx",
+    "xyxxy",
+    "yxxxy",
+    "xxyxxy",
+    "yxxxyx",
+    "xxxyxxy",
+    "yxxxyxx",
+    "yxxxyxxy"
+  ],
+  "regular_trace_determinant": "298023223876953125",
+  "centre_dimension": 1,
+  "hilbert_series": "(t**2 - t + 1)*(t**17 + t**16 + t**15 - t**8 - t**7 - t**6 - t**5 - t**3 - t**2 - t - 1)/(t - 1)",
+  "X5": [
+    [
+      "0",
+      "0",
+      "0",
+      "-1",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0"
+    ]
+  ],
+  "Y5": [
+    [
+      "0",
+      "0",
+      "1",
+      "0",
+      "0"
+    ],
+    [
+      "1",
+      "0",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    [
+      "0",
+      "-1",
+      "0",
+      "0",
+      "0"
+    ],
+    [
+      "0",
+      "0",
+      "0",
+      "1",
+      "0"
+    ]
+  ],
+  "S_zero_dimension": 40,
+  "ordinary_S_equal_0_groebner_basis": [
+    {
+      "xxxx": "1"
+    },
+    {
+      "yy": "1",
+      "yxx": "1",
+      "xxy": "1",
+      "xyx": "1"
+    },
+    {
+      "yxy": "1",
+      "xxyx": "-1",
+      "xyxx": "-1"
+    },
+    {
+      "xxyxxx": "1",
+      "yxxxy": "1",
+      "yxxyx": "1",
+      "xxxyxx": "1",
+      "xyxxy": "1"
+    },
+    {
+      "yxxxyxxx": "1",
+      "xyxxxyxx": "-1",
+      "xxyxxxyx": "1",
+      "xxxyxxxy": "-1"
+    }
+  ],
+  "ordinary_S_equal_0_basis_words": [
+    "",
+    "x",
+    "xx",
+    "y",
+    "xxx",
+    "xy",
+    "yx",
+    "xxy",
+    "xyx",
+    "yxx",
+    "xxxy",
+    "xxyx",
+    "xyxx",
+    "yxxx",
+    "xxxyx",
+    "xxyxx",
+    "xyxxx",
+    "yxxy",
+    "xxxyxx",
+    "xxyxxx",
+    "xyxxy",
+    "yxxxy",
+    "xxxyxxx",
+    "xxyxxy",
+    "xyxxxy",
+    "yxxxyx",
+    "xxxyxxy",
+    "xxyxxxy",
+    "xyxxxyx",
+    "yxxxyxx",
+    "xxxyxxxy",
+    "xxyxxxyx",
+    "xyxxxyxx",
+    "xxxyxxxyx",
+    "xxyxxxyxx",
+    "yxxxyxxy",
+    "xxxyxxxyxx",
+    "xyxxxyxxy",
+    "xxyxxxyxxy",
+    "xxxyxxxyxxy"
+  ],
+  "critical_pairs": {
+    "homogeneous": 137,
+    "S_equal_0": 19,
+    "S_equal_1": 66
+  }
+}
