@@ -86,11 +86,13 @@ Example:
 
 For a metadata link, replace its `<dd>To be added</dd>` with `<dd><a href="YOUR_FULL_URL">YOUR_LINK_LABEL</a></dd>`, using the actual URL and label. Unavailable metadata stays hidden, so visitors never encounter placeholder text or fake links.
 
-The first paper is a copy of the original thesis PDF. Its public link is `thesis/Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf`. A path on your Mac would not work for website visitors. If you revise the original PDF, copy the updated file into this site's `thesis/` folder again; the files are not automatically synchronized.
+The first paper is the arXiv preprint [Semisimple Deformations of Contraction Algebras for Smooth Threefold Flops](https://arxiv.org/abs/2611.12490). The website also hosts a copy of the thesis PDF and its source distribution. Its public link is `thesis/Wemyss_Semi-Simple_deformation_on_GV_algebras.pdf`. A path on your Mac would not work for website visitors. If you revise the original PDF, copy the updated file into this site's `thesis/` folder again; the files are not automatically synchronized.
 
 Computational code is available from `thesis/thesis_external_files_2026-10-13.zip`, linked as **Computational code** below the paper. To add or update supporting code, copy its ZIP archive into `thesis/` and update the paper's download link in `index.html`. The publishing workflow includes both PDF and ZIP files from this folder.
 
-**Geometric Realization**, by Shutao Bi (October 2026), is a separate manuscript linked from Papers / Preprints. Its PDF is `thesis/Geometric_Realization.pdf`, copied from the main `geometric_realization/` folder of the original research project. When revising it, replace this site's PDF copy and refresh the `v=` version marker in both of that paper's links in `index.html`.
+**On the Type E case of the Brown–Wemyss realization conjecture**, by Shutao Bi (revised November 2026), is a separate manuscript linked from Papers / Preprints. Its PDF is `thesis/Geometric_Realization.pdf`, copied from the main `geometric_realization/` folder of the original research project. When revising it, replace this site's PDF copy and refresh the `v=` version marker in both of that paper's links in `index.html`.
+
+The Type E paper's **LaTeX source** download is `thesis/Geometric_Realization_source.zip`. Its main `.tex` is at the archive root.
 
 The **Computational code** download is `thesis/Geometric_Realization_computational_code.zip`. Its source is in `code/geometric_realization/`. The bundle includes the three Python programs cited in Section 6, the zero-quartic input, the reference output for the length-five calculation, pinned requirements and instructions. The script paths and `requirements-certificates.txt` match the manuscript. `requirements.txt` also works for users of the October package. To release a revision, zip these files under `geometric_realization_computational_code/`, test the extracted bundle, and update its `v=` marker in `index.html` to the first twelve digits of the new ZIP’s SHA-256 digest.
 
